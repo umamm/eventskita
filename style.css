@@ -1,0 +1,307 @@
+:root {
+    /* || Cara pakai variabel: --blue: #1e90ff */
+    /* || Cara panggil variabel: background-color: var(--blue) */
+
+    /* || Font */
+    --header1: 700 24px/27px Poppins, Arial, sans-serif;
+    --header2: 700 20px/30px Poppins, Arial, sans-serif;
+    --medium: 600 16px/24px Poppins, Arial, sans-serif;
+    --regular: normal 16px/24px Poppins, Arial, sans-serif;
+    --small: normal 14px/21px Poppins, Arial, sans-serif;
+
+    /* || Colors */
+    --primary-a: #7041FF;
+    --primary-b: #CF00F1;
+    --secondary-a: #FF6B00;
+    --secondary-b: #28BFFF;
+    --gradient: linear-gradient(98.48deg, #CF00F1 4.94%, #6F2DF7 100%);
+
+    --putih100: #fff;
+    --putih80: rgba(255, 255, 255, 0.8);
+    --putih60: rgba(255, 255, 255, 0.6);
+    --putih40: rgba(255, 255, 255, 0.4);
+    --putih20: rgba(255, 255, 255, 0.2);
+    --putih10: rgba(255, 255, 255, 0.1);
+
+    --bg-solid-black: #171920;
+    --bg-nav-bottom: rgba(45, 63, 89, 0.7);
+    --bg-black-content: rgba(173, 199, 237, 0.08);
+    --bg-white: rgba(255, 255, 255, 0.2);
+
+    /* || Blur & Shadow*/
+    --blur30: blur(30px);
+    --shadow-bottom: 0px -4px 8px rgba(0, 0, 0, 0.08);
+}
+
+*,  *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+body {
+    font: var(--regular);
+}
+
+div > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* || Font Syles */
+
+.header1 {
+    font: var(--header1);
+}
+.header2 {
+    font: var(--header2);
+}
+.medium {
+    font: var(--medium);
+}
+.small {
+    font: var(--small);
+}
+
+.flex-x {
+    display: flex;
+    flex-direction: row;
+}
+.m-b-24 {
+    margin-bottom: 24px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-b-16 {
+    margin-bottom: 16px;
+}
+.m-b-12 {
+    margin-bottom: 12px;
+}
+
+.primary-button {
+    width: 327px;
+    height: 56px;
+    background: var(--gradient);
+    color: var(--putih100);
+    border-radius: 10px;
+    border: 0;
+    font: var(--medium);
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    color: var(--putih100);
+}
+
+.container .card {
+    width: 375px;
+    background-color: var(--bg-solid-black);
+    position: relative;
+    padding: 0 24px 100px;
+}
+
+
+.container .card .hello p {
+    margin-top: 38px;
+    font: var(--regular);
+}
+
+.container .card h1 {
+    font: var(--header1);
+}
+
+.container .card .search {
+    font: var(--regular);
+    width: 327px;
+    height: 44px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.container .card .tag-event {
+    display: flex;
+    list-style-type:none;
+    margin: 0 -24px 20px;
+    padding: 0 24px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+}
+.container .card .content-event {
+    position: relative;
+    top: -36px;
+    z-index: 1;
+    border-radius: 30px 30px 0px 0px;
+    margin: 0 -24px 0;
+    padding: 32px 24px;
+    background-color: var(--bg-solid-black);
+}
+
+
+/* Hide Scrollbar */
+.tag-event::-webkit-scrollbar, .bintang-tamu::-webkit-scrollbar {
+    display: none;
+}
+.tag-event::-webkit-scrollbar, .bintang-tamu::-webkit-scrollbar  {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.container .card .nav-bot {
+    margin-left: -24px;
+    width: 375px;
+    height: 90px;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: auto auto auto;    
+    position: fixed;
+    justify-content: space-evenly;
+    background-color: var(--bg-nav-bottom);
+    backdrop-filter: var(--blur30);   
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container .card .nav-top {
+    width: 375px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -24px;
+    padding: 0 24px 0;
+    z-index: 2;
+    top: 24px;
+    
+}
+.container .card .nav-top .nav-bulat{
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background-color: var(--putih20);
+    backdrop-filter: var(--blur30);
+    border-radius: 50%;
+}
+
+.nav-bot-button {
+    margin-left: -24px;
+    width: 375px;
+    height: 114px;
+    bottom: 0;   
+    position: fixed;
+    display: flex;
+    padding-top: 24px;
+    justify-content: center;
+    background-color: var(--bg-nav-bottom);
+    backdrop-filter: var(--blur30);   
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container .card .nav-bot p{
+    color: var(--secondary-a);
+    font-weight: 600;
+}
+.container .card .nav-bot .off p{
+    color: var(--putih20);
+    font-weight: 300;
+}
+.container .card .tag-event li {
+    height: 40px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-right: 12px;
+    background: var(--putih10);
+}
+
+.container .card .tag-event li:nth-child(2){
+    background: var(--gradient)
+}
+.container .card .tag-event li a{
+    text-decoration: none;
+    color: var(--putih100);
+    font: var(--regular);
+}
+
+.container .card .content .event {
+    background: var(--bg-black-content);
+    border-radius: 20px;
+}
+.container .card .content .event img{
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;;
+}
+.container .card .content .event .detail-event {
+    padding: 12px 12px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail-event .icon-detail {
+    padding: 4px;
+    background-color: var(--primary-a);
+    border-radius: 8px;
+}
+
+.container .card .content .event .detail-event .kotak-biru-text {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-a);
+    border-radius: 8px;
+    line-height: 100%;
+}
+
+.kotak-biru-icon {
+    width: 46px;
+    height: 46px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-a);
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.img-header img {
+    margin: 0 -24px 0;
+    width: 375px;
+    height: 320px;
+    background-image: cover;
+}
+
+.bintang-tamu {
+    list-style-type: none;
+    display: flex;
+    margin: 0 -24px 0;
+    padding: 0 24px 0;
+    overflow-x: scroll;
+}
+.bintang-tamu li {
+    margin-right: 20px;
+}
+.bintang-tamu li p {
+    text-align: center;
+}
+
+.bintang-tamu img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
